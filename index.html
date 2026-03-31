@@ -28,8 +28,8 @@
     <div class="score mt-5 mb-10 grid grid-cols-2 w-[420px] gap-5 text-center text-[35px] bg-white p-5 rounded-[15px]">
         <p class="font-bold text-lg">Vous</p>
         <p class="font-bold text-lg">Ordinateur</p>
-        <p id="score-joueur" class="font-mono">0</p>
-        <p id="score-ordi" class="font-mono">0</p>
+        <p id="score-joueur" class="font-mono text-primary">0</p>
+        <p id="score-ordi" class="font-mono text-secondary">0</p>
         <!-- <div id="reset" class="text-[12px] col-span-2 cursor-pointer hover:text-action transition-colors">
             Recommencer
         </div> -->
@@ -38,13 +38,17 @@
     <div class="action mb-10 text-center">
         <p id="message" class="text-[25px]">A vous de jouer !</p>
         <div id="next"
-            class="mt-5 px-[30px] py-[10px] bg-action text-white rounded-[15px] cursor-pointer transition-opacity">
+            class="mt-5 px-[30px] py-[10px] bg-gradient-to-r from-primary to-secondary text-white rounded-[15px] cursor-pointer transition-opacity">
             Recommencer
         </div>
     </div>
 
     <div class="jeu border-t border-black pt-10 grid grid-cols-2 gap-[100px] md:gap-[200px]">
         <div class="choix">
+            <div class="flex gap-3 items-center justify-center font-bold text-primary text-2xl mb-4">
+                <img src="./assets/img/person.png" alt="michel">
+                <span>Vous</span>
+            </div>
             <div class="button btn-joueur flex items-center text-[30px] md:text-[45px] p-5 mb-10 rounded-[15px] bg-white cursor-pointer transition-all hover:bg-primary transition-all duration-200"
                 id="pierre">
                 <img src="./assets/img/pierre.png" alt="pierre" class="w-12 h-12 md:w-auto md:h-auto" />
@@ -63,6 +67,10 @@
         </div>
 
         <div class="choix">
+            <div class="flex gap-3 items-center justify-center font-bold text-secondary text-2xl mb-4">
+                <img src="./assets/img/computer.png" alt="michel">
+                <span>Michel.bot</span>
+            </div>   
             <div class="button border-secondary border btn-ordi flex items-center text-[30px] md:text-[45px] p-5 mb-10 rounded-[15px] transition-all duration-200 "
                 id="opierre">
                 <img src="./assets/img/pierre.png" alt="pierre" class="w-12 h-12 md:w-auto md:h-auto" />
