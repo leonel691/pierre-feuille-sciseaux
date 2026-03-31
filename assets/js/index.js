@@ -7,11 +7,11 @@ const boutonTourSuiv = document.getElementById("next")
 // utilisateur
 const pierre = document.getElementById("pierre")
 const feuille = document.getElementById("feuille")
-const ciseau = document.getElementById("ciseaux")
+const ciseau = document.getElementById("ciseau")
 //ordi
 const ordiPierre = document.getElementById("opierre")
 const ordiFeuille = document.getElementById("ofeuille")
-const ordiCiseau = document.getElementById("ociseaux")
+const ordiCiseau = document.getElementById("ociseau")
 
 function gagnerPointUser() {
     scoreActuelUser++; // On change la donnée
@@ -44,6 +44,7 @@ function ordiChoix() {
     elementGagnant.classList.remove('grayscale'); // Optionnel : pour remettre l'image en couleur
     // alert(choixOrdi)
     return choixOrdi
+    return elementsOrdi
 }
 // fonction de la logique du jeu
 function quiGagne() {
@@ -94,5 +95,13 @@ boutonTourSuiv.addEventListener("click", () => {
     scoreAffichageUser.innerText = scoreActuelUser;
     scoreAffichageOrdi.innerText = scoreActuelOrdi;
 
-})
+    const elementsOrdi = {
+        "pierre": ordiPierre,
+        "feuille": ordiFeuille,
+        "ciseau": ordiCiseau
+    };
+    Object.values(elementsOrdi).forEach(el => el.classList.remove('bg-orange-500', 'grayscale-0'));
+    Object.values(elementsOrdi).forEach(el => el.classList.add('grayscale'));
+
+  })
 
