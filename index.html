@@ -1,14 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <title>shifoumi</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#00d9ff',
+                        secondary: '#ff8800',
+                        back: '#f1f1f1',
+                        action: '#ff6565',
+                    }
+                }
+            }
+        }
+    </script>
+    <title>Pierre Feuille Ciseaux - Tailwind</title>
 </head>
-<body>
-    .flex>p*2
+<body class="bg-back font-sans p-5 flex flex-col items-center">
 
+    <div class="score mt-5 mb-10 grid grid-cols-2 w-[420px] gap-5 text-center text-[35px] bg-white p-5 rounded-[15px]">
+        <p class="font-bold text-lg">Vous</p>
+        <p class="font-bold text-lg">Ordinateur</p>
+        <p id="score-joueur" class="font-mono">0</p>
+        <p id="score-ordi" class="font-mono">0</p>
+        <!-- <div id="reset" class="text-[12px] col-span-2 cursor-pointer hover:text-action transition-colors">
+            Recommencer
+        </div> -->
+    </div>
+
+    <div class="action mb-10 text-center">
+        <p id="message" class="text-[25px]">A vous de jouer !</p>
+        <div id="next" class="mt-5 px-[30px] py-[10px] bg-action text-white rounded-[15px] cursor-pointer transition-opacity">
+            Tour suivant
+        </div>
+    </div>
+
+    <div class="jeu border-t border-black pt-10 grid grid-cols-2 gap-[100px] md:gap-[200px]">
+        <div class="choix">
+            <div class="button btn-joueur flex items-center text-[30px] md:text-[45px] p-5 mb-10 rounded-[15px] bg-white cursor-pointer transition-all hover:bg-primary transition-all duration-200" id="pierre">
+                <img src="./assets/img/pierre.png" alt="pierre" class="w-12 h-12 md:w-auto md:h-auto" />
+                <p class="ml-5">Pierre</p>
+            </div>
+            <div class="button btn-joueur flex items-center text-[30px] md:text-[45px] p-5 mb-10 rounded-[15px] bg-white cursor-pointer transition-all hover:bg-primary transition-all duration-200" id="feuille">
+                <img src="./assets/img/leaf.png" alt="feuille" class="w-12 h-12 md:w-auto md:h-auto" />
+                <p class="ml-5">Feuille</p>
+            </div>
+            <div class="button btn-joueur flex items-center text-[30px] md:text-[45px] p-5 rounded-[15px] bg-white cursor-pointer transition-all hover:bg-primary transition-all duration-200" id="ciseaux">
+                <img src="./assets/img/ciseaux.png" alt="ciseaux" class="w-12 h-12 md:w-auto md:h-auto" />
+                <p class="ml-5">Ciseaux</p>
+            </div>
+        </div>
+
+        <div class="choix">
+            <div class="button border-secondary border btn-ordi flex items-center text-[30px] md:text-[45px] p-5 mb-10 rounded-[15px] transition-all duration-200 " id="opierre">
+                <img src="./assets/img/pierre.png" alt="pierre" class="w-12 h-12 md:w-auto md:h-auto" />
+                <p class="ml-5">Pierre</p>
+            </div>
+            <div class="button border-secondary border btn-ordi flex items-center text-[30px] md:text-[45px] p-5 mb-10 rounded-[15px] transition-all duration-200 " id="ofeuille">
+                <img src="./assets/img/leaf.png" alt="feuille" class="w-12 h-12 md:w-auto md:h-auto" />
+                <p class="ml-5">Feuille</p>
+            </div>
+            <div class="button border-secondary border btn-ordi flex items-center text-[30px] md:text-[45px] p-5 rounded-[15px] transition-all duration-200 " id="ociseaux">
+                <img src="./assets/img/ciseaux.png" alt="ciseaux" class="w-12 h-12 md:w-auto md:h-auto" />
+                <p class="ml-5">Ciseaux</p>
+            </div>
+        </div>
+    </div>
     <script src="./assets/js/index.js"></script>
+    <style>
+        /* Ces classes sont ajoutées par ton app.js, on les définit avec les utilitaires Tailwind */
+        .visible { visibility: visible !important; }
+        .active.btn-joueur { background-color: #00d9ff !important; color: white; }
+        .active.btn-ordi { background-color: #ff8800 !important; color: #ff8800; grayscale: #ff8800; }
+        .desactivated { background-color: #f1f1f1 !important; cursor: default !important; }
+        .desactivated:hover { color: inherit !important; }
+    </style>
 </body>
 </html>
