@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -21,6 +22,7 @@
     </script>
     <title>Pierre Feuille Ciseaux - Tailwind</title>
 </head>
+
 <body class="bg-back font-sans p-5 flex flex-col items-center">
 
     <div class="score mt-5 mb-10 grid grid-cols-2 w-[420px] gap-5 text-center text-[35px] bg-white p-5 rounded-[15px]">
@@ -35,37 +37,44 @@
 
     <div class="action mb-10 text-center">
         <p id="message" class="text-[25px]">A vous de jouer !</p>
-        <div id="next" class="mt-5 px-[30px] py-[10px] bg-action text-white rounded-[15px] cursor-pointer transition-opacity">
-            Tour suivant
+        <div id="next"
+            class="mt-5 px-[30px] py-[10px] bg-action text-white rounded-[15px] cursor-pointer transition-opacity">
+            Recommencer
         </div>
     </div>
 
     <div class="jeu border-t border-black pt-10 grid grid-cols-2 gap-[100px] md:gap-[200px]">
         <div class="choix">
-            <div class="button btn-joueur flex items-center text-[30px] md:text-[45px] p-5 mb-10 rounded-[15px] bg-white cursor-pointer transition-all hover:bg-primary transition-all duration-200" id="pierre">
+            <div class="button btn-joueur flex items-center text-[30px] md:text-[45px] p-5 mb-10 rounded-[15px] bg-white cursor-pointer transition-all hover:bg-primary transition-all duration-200"
+                id="pierre">
                 <img src="./assets/img/pierre.png" alt="pierre" class="w-12 h-12 md:w-auto md:h-auto" />
                 <p class="ml-5">Pierre</p>
             </div>
-            <div class="button btn-joueur flex items-center text-[30px] md:text-[45px] p-5 mb-10 rounded-[15px] bg-white cursor-pointer transition-all hover:bg-primary transition-all duration-200" id="feuille">
+            <div class="button btn-joueur flex items-center text-[30px] md:text-[45px] p-5 mb-10 rounded-[15px] bg-white cursor-pointer transition-all hover:bg-primary transition-all duration-200"
+                id="feuille">
                 <img src="./assets/img/leaf.png" alt="feuille" class="w-12 h-12 md:w-auto md:h-auto" />
                 <p class="ml-5">Feuille</p>
             </div>
-            <div class="button btn-joueur flex items-center text-[30px] md:text-[45px] p-5 rounded-[15px] bg-white cursor-pointer transition-all hover:bg-primary transition-all duration-200" id="ciseau">
+            <div class="button btn-joueur flex items-center text-[30px] md:text-[45px] p-5 rounded-[15px] bg-white cursor-pointer transition-all hover:bg-primary transition-all duration-200"
+                id="ciseau">
                 <img src="./assets/img/ciseaux.png" alt="ciseaux" class="w-12 h-12 md:w-auto md:h-auto" />
                 <p class="ml-5">Ciseaux</p>
             </div>
         </div>
 
         <div class="choix">
-            <div class="button border-secondary border btn-ordi flex items-center text-[30px] md:text-[45px] p-5 mb-10 rounded-[15px] transition-all duration-200 " id="opierre">
+            <div class="button border-secondary border btn-ordi flex items-center text-[30px] md:text-[45px] p-5 mb-10 rounded-[15px] transition-all duration-200 "
+                id="opierre">
                 <img src="./assets/img/pierre.png" alt="pierre" class="w-12 h-12 md:w-auto md:h-auto" />
                 <p class="ml-5">Pierre</p>
             </div>
-            <div class="button border-secondary border btn-ordi flex items-center text-[30px] md:text-[45px] p-5 mb-10 rounded-[15px] transition-all duration-200 " id="ofeuille">
+            <div class="button border-secondary border btn-ordi flex items-center text-[30px] md:text-[45px] p-5 mb-10 rounded-[15px] transition-all duration-200 "
+                id="ofeuille">
                 <img src="./assets/img/leaf.png" alt="feuille" class="w-12 h-12 md:w-auto md:h-auto" />
                 <p class="ml-5">Feuille</p>
             </div>
-            <div class="button border-secondary border btn-ordi flex items-center text-[30px] md:text-[45px] p-5 rounded-[15px] transition-all duration-200 " id="ociseau">
+            <div class="button border-secondary border btn-ordi flex items-center text-[30px] md:text-[45px] p-5 rounded-[15px] transition-all duration-200 "
+                id="ociseau">
                 <img src="./assets/img/ciseaux.png" alt="ciseaux" class="w-12 h-12 md:w-auto md:h-auto" />
                 <p class="ml-5">Ciseaux</p>
             </div>
@@ -74,11 +83,30 @@
     <script src="./assets/js/index.js"></script>
     <style>
         /* Ces classes sont ajoutées par ton app.js, on les définit avec les utilitaires Tailwind */
-        .visible { visibility: visible !important; }
-        .active.btn-joueur { background-color: #00d9ff !important; color: white; }
-        .active.btn-ordi { background-color: #ff8800 !important; color: #ff8800; grayscale: #ff8800; }
-        .desactivated { background-color: #f1f1f1 !important; cursor: default !important; }
-        .desactivated:hover { color: inherit !important; }
+        .visible {
+            visibility: visible !important;
+        }
+
+        .active.btn-joueur {
+            background-color: #00d9ff !important;
+            color: white;
+        }
+
+        .active.btn-ordi {
+            background-color: #ff8800 !important;
+            color: #ff8800;
+            grayscale: #ff8800;
+        }
+
+        .desactivated {
+            background-color: #f1f1f1 !important;
+            cursor: default !important;
+        }
+
+        .desactivated:hover {
+            color: inherit !important;
+        }
     </style>
 </body>
+
 </html>
