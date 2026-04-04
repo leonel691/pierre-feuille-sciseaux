@@ -23,11 +23,11 @@
     <title>Pierre Feuille Ciseaux - Tailwind</title>
 </head>
 
-<body class="bg-back font-sans p-5 flex flex-col items-center">
+<body class="bg-back font-sans p-3 sm:p-5 flex flex-col items-center min-h-screen">
 
-    <div class="score mt-5 mb-10 grid grid-cols-2 w-[420px] gap-5 text-center text-[35px] bg-white p-5 rounded-[15px]">
-        <p class="font-bold text-lg">Vous</p>
-        <p class="font-bold text-lg">Ordinateur</p>
+    <div class="score mt-5 mb-10 grid grid-cols-2 w-[90%] max-w-[420px] gap-3 sm:gap-5 text-center text-[28px] sm:text-[35px] bg-white p-4 sm:p-5 rounded-[15px]">
+        <p class="font-bold text-base sm:text-lg">Vous</p>
+        <p class="font-bold text-base sm:text-lg">Ordinateur</p>
         <p id="score-joueur" class="font-mono text-primary">0</p>
         <p id="score-ordi" class="font-mono text-secondary">0</p>
         <!-- <div id="reset" class="text-[12px] col-span-2 cursor-pointer hover:text-action transition-colors">
@@ -35,56 +35,56 @@
         </div> -->
     </div>
 
-    <div class="action mb-10 text-center">
-        <p id="message" class="text-[25px]">A vous de jouer !</p>
+    <div class="action mb-6 sm:mb-10 text-center px-3">
+        <p id="message" class="text-lg sm:text-[25px]">A vous de jouer !</p>
         <div id="next"
-            class="mt-5 px-[30px] py-[10px] bg-gradient-to-r from-primary to-secondary text-white rounded-[15px] cursor-pointer transition-opacity">
+            class="mt-5 px-5 sm:px-[30px] py-[8px] sm:py-[10px] bg-gradient-to-r from-primary to-secondary text-white text-sm sm:text-base rounded-[15px] cursor-pointer transition-opacity">
             Recommencer
         </div>
     </div>
 
-    <div class="jeu border-t border-black pt-10 grid grid-cols-2 gap-[100px] md:gap-[200px]">
+    <div class="jeu border-t border-black pt-6 sm:pt-10 grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-[100px] md:gap-[200px] w-full max-w-[900px] px-3">
         <div class="choix">
-            <div class="flex gap-3 items-center justify-center font-bold text-primary text-2xl mb-4">
-                <img src="./assets/img/person.png" alt="michel">
+            <div class="flex gap-3 items-center justify-center font-bold text-primary text-xl sm:text-2xl mb-4">
+                <img src="./assets/img/person.png" alt="michel" class="w-6 h-6 sm:w-auto sm:h-auto">
                 <span>Vous</span>
             </div>
-            <div class="button btn-joueur flex items-center text-[30px] md:text-[45px] p-5 mb-10 rounded-[15px] bg-white cursor-pointer transition-all hover:bg-primary transition-all duration-200"
+            <div class="button btn-joueur flex items-center text-xl sm:text-[30px] md:text-[45px] p-3 sm:p-5 mb-6 sm:mb-10 rounded-[15px] bg-white cursor-pointer transition-all hover:bg-primary transition-all duration-200"
                 id="pierre">
-                <img src="./assets/img/pierre.png" alt="pierre" class="w-12 h-12 md:w-auto md:h-auto" />
-                <p class="ml-5">Pierre</p>
+                <img src="./assets/img/pierre.png" alt="pierre" class="w-10 h-10 sm:w-12 sm:h-12 md:w-auto md:h-auto" />
+                <p class="ml-3 sm:ml-5">Pierre</p>
             </div>
-            <div class="button btn-joueur flex items-center text-[30px] md:text-[45px] p-5 mb-10 rounded-[15px] bg-white cursor-pointer transition-all hover:bg-primary transition-all duration-200"
+            <div class="button btn-joueur flex items-center text-xl sm:text-[30px] md:text-[45px] p-3 sm:p-5 mb-6 sm:mb-10 rounded-[15px] bg-white cursor-pointer transition-all hover:bg-primary transition-all duration-200"
                 id="feuille">
-                <img src="./assets/img/leaf.png" alt="feuille" class="w-12 h-12 md:w-auto md:h-auto" />
-                <p class="ml-5">Feuille</p>
+                <img src="./assets/img/leaf.png" alt="feuille" class="w-10 h-10 sm:w-12 sm:h-12 md:w-auto md:h-auto" />
+                <p class="ml-3 sm:ml-5">Feuille</p>
             </div>
-            <div class="button btn-joueur flex items-center text-[30px] md:text-[45px] p-5 rounded-[15px] bg-white cursor-pointer transition-all hover:bg-primary transition-all duration-200"
+            <div class="button btn-joueur flex items-center text-xl sm:text-[30px] md:text-[45px] p-3 sm:p-5 rounded-[15px] bg-white cursor-pointer transition-all hover:bg-primary transition-all duration-200"
                 id="ciseau">
-                <img src="./assets/img/ciseaux.png" alt="ciseaux" class="w-12 h-12 md:w-auto md:h-auto" />
-                <p class="ml-5">Ciseaux</p>
+                <img src="./assets/img/ciseaux.png" alt="ciseaux" class="w-10 h-10 sm:w-12 sm:h-12 md:w-auto md:h-auto" />
+                <p class="ml-3 sm:ml-5">Ciseaux</p>
             </div>
         </div>
 
         <div class="choix">
-            <div class="flex gap-3 items-center justify-center font-bold text-secondary text-2xl mb-4">
-                <img src="./assets/img/computer.png" alt="michel">
+            <div class="flex gap-3 items-center justify-center font-bold text-secondary text-xl sm:text-2xl mb-4">
+                <img src="./assets/img/computer.png" alt="michel" class="w-6 h-6 sm:w-auto sm:h-auto">
                 <span>Michel.bot</span>
             </div>   
-            <div class="button border-secondary border btn-ordi flex items-center text-[30px] md:text-[45px] p-5 mb-10 rounded-[15px] transition-all duration-200 "
+            <div class="button border-secondary border btn-ordi flex items-center text-xl sm:text-[30px] md:text-[45px] p-3 sm:p-5 mb-6 sm:mb-10 rounded-[15px] transition-all duration-200 "
                 id="opierre">
-                <img src="./assets/img/pierre.png" alt="pierre" class="w-12 h-12 md:w-auto md:h-auto" />
-                <p class="ml-5">Pierre</p>
+                <img src="./assets/img/pierre.png" alt="pierre" class="w-10 h-10 sm:w-12 sm:h-12 md:w-auto md:h-auto" />
+                <p class="ml-3 sm:ml-5">Pierre</p>
             </div>
-            <div class="button border-secondary border btn-ordi flex items-center text-[30px] md:text-[45px] p-5 mb-10 rounded-[15px] transition-all duration-200 "
+            <div class="button border-secondary border btn-ordi flex items-center text-xl sm:text-[30px] md:text-[45px] p-3 sm:p-5 mb-6 sm:mb-10 rounded-[15px] transition-all duration-200 "
                 id="ofeuille">
-                <img src="./assets/img/leaf.png" alt="feuille" class="w-12 h-12 md:w-auto md:h-auto" />
-                <p class="ml-5">Feuille</p>
+                <img src="./assets/img/leaf.png" alt="feuille" class="w-10 h-10 sm:w-12 sm:h-12 md:w-auto md:h-auto" />
+                <p class="ml-3 sm:ml-5">Feuille</p>
             </div>
-            <div class="button border-secondary border btn-ordi flex items-center text-[30px] md:text-[45px] p-5 rounded-[15px] transition-all duration-200 "
+            <div class="button border-secondary border btn-ordi flex items-center text-xl sm:text-[30px] md:text-[45px] p-3 sm:p-5 rounded-[15px] transition-all duration-200 "
                 id="ociseau">
-                <img src="./assets/img/ciseaux.png" alt="ciseaux" class="w-12 h-12 md:w-auto md:h-auto" />
-                <p class="ml-5">Ciseaux</p>
+                <img src="./assets/img/ciseaux.png" alt="ciseaux" class="w-10 h-10 sm:w-12 sm:h-12 md:w-auto md:h-auto" />
+                <p class="ml-3 sm:ml-5">Ciseaux</p>
             </div>
         </div>
     </div>
